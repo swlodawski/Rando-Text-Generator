@@ -21,7 +21,7 @@ function createOptionsUI () {
     });
 
     paragraphsSlider.addEventListener("input", updateParagraphsValue);
-    wordSlider.addEventListener("input", updateWordsValue);
+    wordsSlider.addEventListener("input", updateWordsValue);
 
     const generateButton = document.getElementById("generate");
     generateButton.addEventListener("click", generateLoremIpsum);
@@ -32,7 +32,7 @@ function updateParagraphsValue () {
 }
 
 function updateWordsValue () {
-    wordsValue.textContent = wordSlider.value;
+    wordsValue.textContent = wordsSlider.value;
 }
 
 function generateLoremIpsum () {
@@ -43,7 +43,7 @@ function generateLoremIpsum () {
 
     const loremIpsumText = generateText(paragraphs, tag, includeHtml, wordsPerParagraph);
 
-    displayLoremIpsumText(loremIpsumText);
+    displayLoremIpsum(loremIpsumText);
 }
 
 function generateText (paragraphs, tag, includeHtml, wordsPerParagraph) {
@@ -56,7 +56,7 @@ function generateText (paragraphs, tag, includeHtml, wordsPerParagraph) {
 
         for (let i = 0; i < paragraphs; i++) {
             const words = generateWords(wordsPerParagraph);
-            
+
             loremIpsumArray[i] = includeHtml === "Yes" ? `<${tag}${words}</${tag}>` : words;
         }
 
