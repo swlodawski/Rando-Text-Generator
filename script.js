@@ -39,7 +39,7 @@ function generateLoremIpsum () {
     const paragraphs = parseInt(paragraphsSlider.value);
     const tag = document.getElementById("tags").value;
     const includeHtml = document.getElementById("include").value;
-    const wordsPerParagraph = document.parseInt(wordsSlider.value);
+    const wordsPerParagraph = parseInt(wordsSlider.value);
 
     const loremIpsumText = generateText(paragraphs, tag, includeHtml, wordsPerParagraph);
 
