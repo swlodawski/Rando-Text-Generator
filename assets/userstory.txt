@@ -1,0 +1,4 @@
+AS a lazy person who wants to generate text.
+I AM presented with an application that allows me to generate the text.
+I AM presented with a UI that allows me to input paragraph number, number of words per paragraph and markup tag type.
+The generator with then generate to the specifications based on user input.
